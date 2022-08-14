@@ -1,5 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
+import * as Yup from "yup";
+import "./Signup.css";
 
 export default function Signup() {
   //   const [firstName, setFirstName] = useState("");
@@ -12,6 +14,7 @@ export default function Signup() {
       lastName: "",
       email: "",
     },
+    validationSchema: Yup.object
     onSubmit: (values) => {
       console.log(values);
     },
